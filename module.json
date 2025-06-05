@@ -1,6 +1,6 @@
 {
     "id": "shadowdark-item-piles",
-    "title": "Shadowdark Item Piles",
+    "title": "Item Piles: Shadowdark",
     "version": "1.0",
     "compatibility": {
         "minimum": "12",
@@ -18,6 +18,12 @@
         "./dist/shadowdark-item-piles.js"
     ],
     "relationships": {
+        "systems": [
+            {
+                "id": "shadowdark",
+                "type": "system"
+            }
+        ],
         "requires": [
             {
                 "id": "item-piles",
