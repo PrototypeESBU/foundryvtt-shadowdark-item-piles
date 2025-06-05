@@ -96,12 +96,16 @@ Hooks.once("item-piles-ready", async () => {
     for (const [version, data] of Object.entries(VERSIONS)) {
 		await game.itempiles.API.addSystemIntegration(data, version);
 	}
+
+    // disabled trading
+    await game.settings.set("item-piles", "enableTrading", false);
+    ui.players.render();
 });
+
 
 // ================================
 // Light Source Corrections
 // ================================
-
 
 // override item piles behaviour when droping a torch
 Hooks.on("item-piles-preDropItemDetermined", (actor,target,itemData) => {
